@@ -14,4 +14,4 @@ To bridge the gap between the classroom and home study by giving students conten
 
 ## Founder
 
-Built by Vasu Gupta, Class 9, Indore, India.
+Built by Vasu Gupta, Indore.
