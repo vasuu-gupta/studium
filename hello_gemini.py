@@ -1,18 +1,12 @@
-import time
 from google import genai
+from pypdf import PdfReader
 
-print("Starting...")
-
-start = time.time()
-
+# Key is zhrcs
 client = genai.Client()
 
-print("Sending request...")
-
 response = client.interactions.create(
-    model="gemini-3.6-flash",
-    input="Say hello in one sentence."
+    model="gemini-3.8-flash",
+    input=input("ENTER: "),
 )
 
-print(f"Response received in {time.time() - start:.2f}s")
 print(response.output_text)
