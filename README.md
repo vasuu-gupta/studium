@@ -1,4 +1,4 @@
-# Studium
+# studium
 An education platform designed for Indian schools. 
 
 ## Details
@@ -14,4 +14,4 @@ To bridge the gap between the classroom and home study by giving students conten
 
 ## Founder
 
-Built by Vasu Gupta, Indore.
+Built by Vasu Gupta, Indore, India.
