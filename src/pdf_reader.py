@@ -1,7 +1,9 @@
 from pypdf import PdfReader
+import fontTools
 
 def extract_text(path):
 
+    #EXTRACTING THE TEXT
     file = PdfReader(path)
     content = []
 

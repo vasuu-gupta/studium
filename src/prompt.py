@@ -24,7 +24,7 @@ For activity boxes, use:
 
 # COMPRESSION
 The output must **feel like study notes, not a rewritten textbook**.
-- Target **~20–30% of the source's word count**.
+- Target **~20–30 percent of the source's word count**.
 - Use **5–25 words per bullet**, with **~15 words** as the ideal.
 - Combine related sentences into one point instead of converting the textbook sentence-by-sentence.
 - Remove repetition, filler, unnecessary examples, and explanatory wording that does not add new information.
@@ -70,6 +70,8 @@ Return **valid, clean Markdown (.md)** using this structure:
 - Do not reproduce the textbook sentence-by-sentence.
 - Do not write paragraphs when the information can be expressed as bullets.
 - Do not omit a major concept solely to make the notes shorter.
+- This file is only text, no images or graphics
+- This is going to be viewed in notes app, so no LaTeX or anything that can't be rendered like that, only plain text
 
 SOURCE
 {chapter_text}
