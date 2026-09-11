@@ -10,6 +10,9 @@ def save_material(path, material, type):
     elif type == "quiz":
         output_name = f"{pdf_name}_quiz.md"
 
+    elif type == "flashcards":
+        output_name = f"{pdf_name}_flashcards.md"
+
     with open(f"output/{output_name}", "w") as file:
         file.write(material)
 

@@ -1,7 +1,7 @@
 from ai_client import generate_material
 from pdf_reader import extract_text #The pdf text extract
 from save_output import save_material #saves the notes to a new .md file
-from prompt import NOTES_PROMPT, QUIZ_PROMPT #prompts
+from prompt import NOTES_PROMPT, QUIZ_PROMPT, FLASHCARD_PROMPT #prompts
 
 import argparse #To get the PDF path
 
@@ -22,5 +22,6 @@ elif type == "quiz":
     quiz = generate_material(text, QUIZ_PROMPT)
     save_material(path, quiz, "quiz")
 
-
-
+elif type == "flashcards":
+    flashcards = generate_material(text, FLASHCARD_PROMPT)
+    save_material(path, flashcards, "flashcards")
