@@ -1,33 +1,26 @@
-from google import genai #The AI
-from dotenv import load_dotenv #For the API key
-
-from prompt import NOTES_PROMPT #The prompt
+from ai_client import generate_material
 from pdf_reader import extract_text #The pdf text extract
-from save_notes import save_notes #saves the notes to a new .md file
+from save_output import save_material #saves the notes to a new .md file
+from prompt import NOTES_PROMPT, QUIZ_PROMPT #prompts
 
 import argparse #To get the PDF path
 
-load_dotenv()
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--pdf", help="path to the chapter PDF", required=True)
+parser.add_argument("--type", help="type of content generated", required=True)
 args = parser.parse_args()
 
 path = args.pdf
-
+type = args.type
 text = (extract_text(path))
 
-def generate_notes(text):
-    client = genai.Client()
+if type == "notes":
+    notes = generate_material(text, NOTES_PROMPT)
+    save_material(path,notes, "notes")
 
-    response = client.interactions.create(
-        model="gemini-3.6-flash",
-        input=(NOTES_PROMPT.format(chapter_text=text))
-    )
+elif type == "quiz":
+    quiz = generate_material(text, QUIZ_PROMPT)
+    save_material(path, quiz, "quiz")
 
-    return response.output_text
 
-notes = generate_notes(text)
-
-save_notes(path,notes)
 
