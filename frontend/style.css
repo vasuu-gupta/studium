@@ -1,3 +1,60 @@
+@font-face {
+    font-family: 'Baloo 2';
+    src: url(./assets/fonts/Baloo_2/Baloo2-VariableFont_wght.ttf) format(truetype)
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url(./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf) format(truetype)
+}
+
 body {
     background-color: rgb(254, 247, 241);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    border-bottom: rgb(226, 215, 206) solid 3px;
+}
+
+.header .title {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Baloo 2';
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    align-self: center;
+    padding-top: 20px;
+    flex: 1;
+}
+
+.notes, .quiz, .flashcards{
+    font-family: 'DM Sans';
+    font-size: 30px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.quiz {
+    padding-left: 10px;
+    border-left: rgb(202, 188, 177) solid 2px;
+    padding-right: 10px;
+    border-right: rgb(192, 178, 166) solid 2px;
+}
+
+.selected {
+    border-radius: 10px;
+    background-color: gray;
 }
