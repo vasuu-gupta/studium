@@ -6,7 +6,7 @@ Studium connects teachers and students through a two-sided system: teachers uplo
 
 ## Status
 
-Currently in early development. v0.1 targeted for end of September 2026.
+Currently in early development. v0.1 targeted for end of September 2026. The frontend as of 11th September, 2026, HAS NOT BEEN DEVELOPED. Will be completed late Octoberish.
 
 ## Vision
 
